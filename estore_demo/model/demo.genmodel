@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/estore_demo/gen-src" modelPluginID="estore_demo"
+    modelName="Demo" modelPluginClass="" rootExtendsClass="org.eclipse.emf.ecore.impl.EStoreEObjectImpl"
+    reflectiveDelegation="true" importerID="org.eclipse.emf.importer.java" featureDelegation="Reflective"
+    complianceLevel="6.0" copyrightFields="false" providerRootExtendsClass="" runtimeVersion="2.6"
+    interfaceNamePattern="" operationReflection="true" importOrganizing="true">
+  <foreignModel>@model</foreignModel>
+  <genPackages prefix="Estore_demo" basePackage="com.xored" disposableProviderFactory="true"
+      ecorePackage="estore_demo.ecore#/">
+    <genClasses ecoreClass="estore_demo.ecore#//Person">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute estore_demo.ecore#//Person/firstName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute estore_demo.ecore#//Person/secondName"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference estore_demo.ecore#//Person/likedToWork"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute estore_demo.ecore#//Person/someReallyBigData"/>
+    </genClasses>
+    <genClasses ecoreClass="estore_demo.ecore#//Organization">
+      <genFeatures notify="false" children="true" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference estore_demo.ecore#//Organization/people"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute estore_demo.ecore#//Organization/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute estore_demo.ecore#//Organization/address"/>
+    </genClasses>
+    <genClasses ecoreClass="estore_demo.ecore#//DemoRoot">
+      <genFeatures notify="false" children="true" createChild="true" propertySortChoices="true"
+          ecoreFeature="ecore:EReference estore_demo.ecore#//DemoRoot/organizations"/>
+      <genFeatures notify="false" children="true" createChild="true" propertySortChoices="true"
+          ecoreFeature="ecore:EReference estore_demo.ecore#//DemoRoot/people"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

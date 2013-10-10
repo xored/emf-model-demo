@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated demo -->
+      <package
+            uri="http:///com/xored/estore_demo.ecore"
+            class="com.xored.estore_demo.Estore_demoPackage"
+            genModel="model/demo.genmodel"/>
+   </extension>
+   <extension
+         point="org.eclipse.ui.newWizards">
+      <category
+            id="estore_demo"
+            name="New EStore Demo Model">
+      </category>
+      <wizard
+            category="estore_demo"
+            class="com.xored.estore_demo.wizards.NewDemoModelWizard"
+            icon="icons/sample.gif"
+            id="com.xored.estore_demo.wizards.NewDemoModelWizard"
+            name="New EStore Demo Model">
+      </wizard>
+   </extension>
+   <extension
+         point="org.eclipse.ui.views">
+      <category
+            id="estore_demo"
+            name="EStore Demo">
+      </category>
+      <view
+            category="estore_demo"
+            class="com.xored.estore_demo.views.EStoreDemoViewer"
+            icon="icons/sample.gif"
+            id="com.xored.estore_demo.views.ModelViewer"
+            name="EStore Demo">
+      </view>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated persistence -->
+      <package
+            uri="http:///com/xored/estore_demo/persistence.ecore"
+            class="com.xored.estore_demo.persistence.PersistencePackage"
+            genModel="model/persistence.genmodel"/>
+   </extension>
+
+</plugin>
